@@ -3,9 +3,6 @@
 @section('content')
     <h2> Movies </h2>
     <div class="row row-cols-1 row-cols-sm-3 row-cols-md-6">
-
-{{--        {{dd($films)}}--}}
-
         @foreach ($films as $film)
             <div class="col mb-3">
                 <div class="card">

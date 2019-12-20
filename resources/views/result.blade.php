@@ -9,7 +9,12 @@
             </div>
             <div class="col-8">
                     <p><b>Title :</b> {{$film->title}}</p>
-                    <p><b>Genre :</b> {{$film->genre}}</p>
+                    <p><b>Genre :</b></p>
+                    <ul>
+                        @foreach (json_decode($film->genre, true) as $genre)
+                            <li>{{$genre}}</li>
+                        @endforeach
+                    </ul>
                     <p><b>Year :</b> {{$film->year}}</p>
                     <p><b>Plot :</b> {{$film->plot}}</p>
                     <p><b>Actors :</b></p>
